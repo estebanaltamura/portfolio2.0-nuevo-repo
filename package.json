@@ -1,0 +1,43 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@iconify/react": "^5.0.1",
+    "@mui/material": "^5.15.20",
+    "@vimeo/player": "^2.23.0",
+    "framer-motion": "^11.5.4",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-alice-carousel": "^2.9.1",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18",
+    "react-hotjar": "^6.3.1",
+    "react-material-ui-carousel": "^3.4.2",
+    "swiper": "^11.1.14",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-beautiful-dnd": "^13.1.8",
+    "@types/react-copy-to-clipboard": "^5.0.7",
+    "@types/react-dom": "^18",
+    "@types/uuid": "^10.0.0",
+    "@types/vimeo__player": "^2.18.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
+  }
+}
