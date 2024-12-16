@@ -28,7 +28,7 @@ const Chat = () => {
     <>
       {!imageLoaded && (
         <Skeleton
-        className='plumarii-responsive-skeleton'
+        className='chat-responsive-skeleton'
           variant='rectangular'
           animation='wave'
           style={{
