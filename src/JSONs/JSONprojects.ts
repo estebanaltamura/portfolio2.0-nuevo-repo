@@ -1053,7 +1053,7 @@ export const projects: IProjects[] = [
       {
         type: 'image',
         src: '/images/buenosNegocios/Desktop/chat.jpg',
-        mobileVersionSrc: '/images/lonely/lonelyGridMobile.png',
+        mobileVersionSrc: '/images/buenosNegocios/Desktop/chat.jpg',
         width: '100%',
         marginBottom: 50,
         marginTop: 50,
