@@ -38,6 +38,8 @@ const Home: React.FC = () => {
 
   if(typeof isMobile !== 'boolean') null
 
+  //Forzar actualizacion
+
   return (
     <>
       <Profile />
