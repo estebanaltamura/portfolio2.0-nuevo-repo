@@ -777,8 +777,8 @@ export const projects: IProjects[] = [
         marginBottom: 0,
         marginTop: 0,
       },
-      'Encrypted Chat es una aplicación diseñada para permitir la comunicación entre usuarios sin necesidad de registro. Ofrece cifrado de extremo a extremo, garantizando que el servidor intermediario no almacene ninguna información en su base de datos.',
-      'Al estar encriptado en origen, solo la contraparte puede desencriptar el mensaje con su clave privada, asegurando que ni el servidor ni nadie que pueda interceptar la comunicación pueda conocer el contenido del mensaje.',
+      'Encrypted Chat es una aplicación diseñada para permitir la comunicación entre usuarios sin necesidad de registrarse. Ofrece cifrado de extremo a extremo y garantiza que el servidor intermediario no almacena ninguna información en su base de datos.',
+      'Los mensajes son encriptados con la clave publica compartida por el destinatario del mensaje. Luego, el destinatario del mensaje desencripta el mensaje con su clave privada, asegurando que ni el servidor ni nadie que pueda interceptar la comunicación pueda conocer el contenido del mensaje.',
 
       {
         type: 'carousel',
