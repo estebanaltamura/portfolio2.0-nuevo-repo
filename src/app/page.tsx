@@ -29,10 +29,28 @@ const Home: React.FC = () => {
     // Escuchar el evento resize y actualizar el estado cuando cambie el tamaño
     window.addEventListener('resize', handleResize);
 
-    // Limpiar el listener cuando el componente se desmonte
-    return () => {
-      window.removeEventListener('resize', handleResize);
+ 
+
+    // Bloquear acceso a usuarios desde Argentina
+    const checkLocation = async () => {
+      try {
+        const response = await fetch('https://api.bigdatacloud.net/data/ip-geolocation?key=YOUR_API_KEY'); // Cambia 'YOUR_API_KEY' por tu clave de API
+        const data = await response.json();
+
+        if (data?.countryCode === 'AR') {
+          window.location.href = 'https://www.google.com'; // Redirigir a Google u otra URL
+        }
+      } catch (error) {
+        console.error('Error al determinar la ubicación:', error);
+      }
     };
+
+    checkLocation();
+
+       // Limpiar el listener cuando el componente se desmonte
+       return () => {
+        window.removeEventListener('resize', handleResize);
+      };
 
   }, []);
 

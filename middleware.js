@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request) {
-  const country = request.geo?.country || 'unknown';
+  const country = request.headers.get('x-vercel-ip-country') || 'unknown';
 
-  // Lista de países a bloquear
+  // Lista de países bloqueados
   const blockedCountries = ['AR']; // Argentina
 
   if (blockedCountries.includes(country)) {
-    // Redirigir a Google en la misma pestaña
-    return NextResponse.redirect('https://www.google.com');
+    return NextResponse.redirect('https://www.google.com'); // Redirigir o mostrar un mensaje personalizado
   }
 
   return NextResponse.next();
