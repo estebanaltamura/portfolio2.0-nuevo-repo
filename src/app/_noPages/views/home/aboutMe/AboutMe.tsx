@@ -1,7 +1,11 @@
-import { aboutMe } from "@/JSONs/JSONprojects";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
+import { aboutMe } from "JSONs/JSONprojects";
+import MuiAvatar from '@mui/material/Avatar';
+
 
 const AboutMe = () => {
+  const isMobile = useMediaQuery('(max-width:600px)');  
+
   return (
     <Box
       sx={{
@@ -43,10 +47,13 @@ const AboutMe = () => {
             fontWeight: '600',
             color: 'white',
             marginTop: '2px',
+            flexGrow: 1,
           }}
         >
           Acerca de mi
         </Typography>
+          
+            
       </Box>
       {/*Body */}        
       <Box

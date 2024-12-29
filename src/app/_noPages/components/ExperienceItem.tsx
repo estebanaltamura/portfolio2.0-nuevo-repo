@@ -1,7 +1,6 @@
-'use client';
+;
 
 import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
 
 interface IExperienceItemProps {
   index: number;
@@ -21,7 +20,7 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({
   period,
 }) => {
   return (
-    <Link href={`/experience-detail/${id}`}>
+    <a href={`/experience-detail/${id}`}>
       <Box
         sx={{
           position: 'relative',
@@ -95,7 +94,7 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({
           <img src='/icons/experienceItemIcon.svg' alt='' />
         </Box>
       </Box>
-    </Link>
+    </a>
   );
 };
 

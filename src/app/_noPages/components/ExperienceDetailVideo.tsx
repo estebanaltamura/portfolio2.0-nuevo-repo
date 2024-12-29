@@ -1,8 +1,7 @@
-'use client';
+;
 
 import { Box, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import Vimeo from '@vimeo/player';
 
 interface IExperienceDetailVideoProps {
   src: string;

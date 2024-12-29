@@ -6,7 +6,11 @@
   --main-padding-top-bottom-mobile: 50px;
   --main-padding-left-right-mobile: 20px;
   --font-openSans: 'Open Sans', sans-serif;
+  --font-russoFont: 'Russo One', sans-serif;
+  --font-interFont: 'Inter', sans-serif;
 }
+
+
 
 * {
   margin: 0;

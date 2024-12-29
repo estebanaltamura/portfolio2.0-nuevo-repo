@@ -1,7 +1,7 @@
-'use client';
+;
 
 import { Box, Button, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { useNavigate } from 'react-router-dom';
 
 const Summary: React.FC<{
   summary: {
@@ -10,12 +10,12 @@ const Summary: React.FC<{
     projectId: string;
   };
 }> = ({ summary }) => {
-  const router = useRouter();
+  const router = useNavigate();
 
   const { stack, text, projectId } = summary;
 
   const goToProjectClickHandler = (projectId: string) => {
-    router.push(`/project-detail/${projectId}`);
+    router(`/project-detail/${projectId}`);
   };
 
   return (

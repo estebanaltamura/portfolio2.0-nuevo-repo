@@ -1,6 +1,6 @@
-import CustomCarousel from "@/app/_noPages/components/CustomCarousel"
-import RecommendationsCarousel from "@/app/_noPages/components/RecommentationsCarousel";
+
 import { Box } from "@mui/material";
+import RecommendationsCarousel from "app/_noPages/components/RecommentationsCarousel";
 import { v4 as uuidv4 } from 'uuid';
 
 

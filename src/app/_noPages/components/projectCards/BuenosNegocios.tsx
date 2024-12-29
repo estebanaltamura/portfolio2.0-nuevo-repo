@@ -1,17 +1,17 @@
-'use client';
+;
 
 import { useState, useEffect, useRef } from 'react';
 import { Skeleton, useMediaQuery } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { useNavigate } from 'react-router-dom';
 
 const BuenosNegocios = () => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
   const isDesktop = useMediaQuery('(min-width:1200px)');
-  const router = useRouter();
+  const router = useNavigate();
   const imgRef = useRef<HTMLImageElement>(null);
 
   const clickHandler = () => {
-    router.push('/project-detail/buenos-negocios');
+    router('/project-detail/buenos-negocios');
   };
 
   const handleImageLoad = () => {

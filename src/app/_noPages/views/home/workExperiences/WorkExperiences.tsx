@@ -1,8 +1,8 @@
-'use client';
+;
 
-import { experiences } from '@/JSONs/JSONprojects';
-import ExperienceItem from '@/app/_noPages/components/ExperienceItem';
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import ExperienceItem from 'app/_noPages/components/ExperienceItem';
+import { experiences } from 'JSONs/JSONprojects';
 import { MutableRefObject, useRef, useState } from 'react';
 
 const WorkExperiences = () => {

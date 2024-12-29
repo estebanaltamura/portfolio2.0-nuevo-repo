@@ -1,16 +1,16 @@
-'use client';
+;
 
 import { Box, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Error = () => {
   const [secondsToRedirect, setSecondsToRedirect] = useState<number>(3);
-  const router = useRouter();
+  const router = useNavigate();
 
   useEffect(() => {
     if (secondsToRedirect === 0) {
-      router.push('/');
+      router('/');
     }
   }, [secondsToRedirect, router]);
 

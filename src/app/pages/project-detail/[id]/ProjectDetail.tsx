@@ -1,22 +1,23 @@
-'use client';
-import { projects } from '@/JSONs/JSONprojects';
-import CustomCarousel from '@/app/_noPages/components/CustomCarousel';
-import ExperienceDetailImage from '@/app/_noPages/components/ExperienceDetailImage';
-import ExperienceDetailVideo from '@/app/_noPages/components/ExperienceDetailVideo';
-import LinksToWebsiteAndGithub from '@/app/_noPages/components/LinksToWebsiteAndGithub';
-import ProjectStack from '@/app/_noPages/components/ProjectStack';
+;
+
 import { Box, Typography } from '@mui/material';
-import { useParams, useRouter } from 'next/navigation';
+import CustomCarousel from 'app/_noPages/components/CustomCarousel';
+import ExperienceDetailImage from 'app/_noPages/components/ExperienceDetailImage';
+import ExperienceDetailVideo from 'app/_noPages/components/ExperienceDetailVideo';
+import LinksToWebsiteAndGithub from 'app/_noPages/components/LinksToWebsiteAndGithub';
+import ProjectStack from 'app/_noPages/components/ProjectStack';
+import { projects } from 'JSONs/JSONprojects';
 import React from 'react';
 import { useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const ExperienceDetail = () => {
-  const router = useRouter();
-  const params = useParams();
-  const id: string | string[] = params.id;
+const ProjectDetail = () => {
+  const router = useNavigate();
+  const params = useParams<{ id: string }>(); 
+  const id: string | undefined = params.id;
 
   const backToHomeButtonHandler = () => {
-    router.push('/');
+    router('/');
   };
 
   useEffect(() => {
@@ -24,22 +25,22 @@ const ExperienceDetail = () => {
   }, []);
 
   if (!id || typeof id !== 'string') {
-    router.push('/not-found');
-    return;
+    router('/not-found');
+    return null;
   }
 
   const isKnownId = projects.map((experience) => experience.id).includes(id);
 
   if (!isKnownId) {
-    router.push('/not-found');
-    return;
+    router('/not-found');
+    return null;
   }
 
   const experience = projects.find((experience) => experience.id === id);
 
   if (!experience) {
-    router.push('/error');
-    return;
+    router('/error');
+    return null;
   }
 
   const period = experience.period;
@@ -216,6 +217,7 @@ const ExperienceDetail = () => {
               return (
                 <a
                   target='_blank'
+                  rel='noopener noreferrer'
                   key={index}
                   href={detail.href}
                   style={{
@@ -341,6 +343,5 @@ const ExperienceDetail = () => {
   );
 };
 
-export default ExperienceDetail;
+export default ProjectDetail;
 
-//http://localhost:3000/experience-detail/456

@@ -1,14 +1,14 @@
-'use client';
+;
 
-import ActasItalianas from '@/app/_noPages/components/projectCards/ActasItalianas';
-import AsistenteVirtualIa from '@/app/_noPages/components/projectCards/AsistenteVirtualIa';
-import BuenosNegocios from '@/app/_noPages/components/projectCards/BuenosNegocios';
-import Chat from '@/app/_noPages/components/projectCards/Chat';
-import EncryptedChat from '@/app/_noPages/components/projectCards/EncryptedChat';
-import Lonely from '@/app/_noPages/components/projectCards/Lonely';
-import Plumarii from '@/app/_noPages/components/projectCards/Plumarii';
-import Varios from '@/app/_noPages/components/projectCards/Varios';
 import { Box, Typography, useMediaQuery } from '@mui/material';
+import ActasItalianas from 'app/_noPages/components/projectCards/ActasItalianas';
+import AsistenteVirtualIa from 'app/_noPages/components/projectCards/AsistenteVirtualIa';
+import BuenosNegocios from 'app/_noPages/components/projectCards/BuenosNegocios';
+import Chat from 'app/_noPages/components/projectCards/Chat';
+import EncryptedChat from 'app/_noPages/components/projectCards/EncryptedChat';
+import Lonely from 'app/_noPages/components/projectCards/Lonely';
+import Plumarii from 'app/_noPages/components/projectCards/Plumarii';
+import Varios from 'app/_noPages/components/projectCards/Varios';
 
 const Projects = () => {
   return (
@@ -29,6 +29,7 @@ const Projects = () => {
         overflow: 'hidden',
         '@media(min-width: 1200px)': {
           padding: '16px 32px 32px 32px',
+          width:'1021px',
           maxWidth: '1021px',
           maxHeight: '608px',
         },
@@ -76,6 +77,7 @@ const Projects = () => {
             backgroundColor: '#8C8C8C',
             borderRadius: '20px',
           },
+          
         }}
       >
         <Box
@@ -103,8 +105,7 @@ const Projects = () => {
           >
             <AsistenteVirtualIa />
             <Chat />
-            <ActasItalianas />
-            
+            <ActasItalianas />            
             <Varios />
           </Box>
           <Box

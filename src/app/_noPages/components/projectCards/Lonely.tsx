@@ -1,17 +1,17 @@
-'use client';
+;
 
 import { useState, useEffect, useRef } from 'react';
 import { Skeleton, useMediaQuery } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { useNavigate } from 'react-router-dom';
 
 const Lonely = () => {
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  const router = useRouter();
+  const router = useNavigate();
   const imgRef = useRef<HTMLImageElement>(null);
   const isDesktop = useMediaQuery('(min-width:1200px)');
 
   const clickHandler = () => {
-    router.push('/project-detail/lonely');
+    router('/project-detail/lonely');
   };
 
   const handleImageLoad = () => {
