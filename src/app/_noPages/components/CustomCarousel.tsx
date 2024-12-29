@@ -71,13 +71,13 @@ const CustomCarousel: React.FC<ICustomCarouselProps> = ({
 
   const mobileItems = mobileSrcImages.map((src, index) => (
     <SwiperSlide key={index}>
-      <img src={src} alt={`Slide ${index + 1}`} />
+      <img src={src} alt={`Slide ${index + 1}`} style={{userSelect: 'none'}}/>
     </SwiperSlide>
   ));
 
   const desktopItems = desktopSrcImages.map((src, index) => (
     <SwiperSlide key={index}>
-      <img src={src} alt={`Slide ${index + 1}`} />
+      <img src={src} alt={`Slide ${index + 1}`} style={{userSelect: 'none'}}/>
     </SwiperSlide>
   ));
 
