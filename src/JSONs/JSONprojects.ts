@@ -145,7 +145,7 @@ export const experiences: IExperiences[] = [
     },
     details: [
       '<b>Situación</b>',
-      'Koi ventures es una incubadora de negocios y software factory de Argentina. Trabajo desde noviembre de 2023 para el sector software factory.',
+      'Koi ventures es una incubadora de negocios y software factory de Argentina. Trabajo desde agosto de 2023 para el sector software factory.',
       '<b>Tarea</b>',
       ' Me desempeño como referente tecnológico, líder de equipo, nexo con el cliente y como principal desarrollador del proyecto.',
 
